@@ -14,7 +14,6 @@
 #           If this topic is empty, a black image will be used instead.
 # --camera_info: Path to camera info file. See `data/cam_params_realsense.json`.
 
-camera_info_file_path: "data/cam_params_realsense.json"
 # -- Output ROS topic names:
 topic_colored_mask: "detect_plane/colored_mask" # Colored mask, which annotates each plane.
 topic_image_viz: "detect_plane/image_viz" # Visualization image, drawn witn arrows of plane normals.
