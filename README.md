@@ -17,6 +17,14 @@ The main scripts are: [plane_detector.py](plane_detector.py), [run_server.py](ru
 ![](doc/res_demo.gif)
 
 
+**Method:**
+```
+(1) Create point cloud from depth image
+(2) while RANSAC hasn't failed:
+(3)    Use RANSAC to detect a plane from point cloud.
+(4)    Remove the plane's points from point cloud.
+```
+
 **Contents:**
   * [1. Results are published to ROS topics](#1-results-are-published-to-ros-topics)
   * [2. Test without ROS](#2-test-without-ros)

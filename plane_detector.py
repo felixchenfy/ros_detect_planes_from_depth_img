@@ -313,15 +313,19 @@ def calc_opposite_point(p0, p1, length=5.0, to_int=True):
 
 
 def test_PlaneDetector():
+
+    # -- Read color image and depth images
     img_color = cv2.imread("data/test_img_color.png", cv2.IMREAD_UNCHANGED)
     img_depth = cv2.imread("data/test_img_depth.png", cv2.IMREAD_UNCHANGED)
     config_file = "config/plane_detector_config.yaml"
     camera_info_file_path = "data/cam_params_realsense.json"
     detector = PlaneDetector(config_file, camera_info_file_path)
+
+    # -- Detect planes.
     list_plane_params, planes_mask, planes_img_viz = detector.detect_planes(
         img_depth, img_color)
 
-    # Print result.
+    # -- Print result.
     for i, plane_param in enumerate(list_plane_params):
         plane_param.print_params(index=i+1)
 
