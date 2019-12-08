@@ -10,8 +10,10 @@ rosrun ros_detect_planes_from_depth_img run_server.py \
     --color_topic test_data/color \
     --camera_info $ROOT/data/cam_params_realsense.json
 ```
+
 The main scripts are: [plane_detector.py](plane_detector.py), [run_server.py](run_server.py), and [config/plane_detector_config.yaml](config/plane_detector_config.yaml).
 
+For a fast unit test, run: `bash run_unit_test.sh`
 
 **Demo:**  
 ![](doc/res_demo.gif)
