@@ -9,7 +9,10 @@ if [ ! -d "ros_pub_and_sub_rgbd_and_cloud" ]; then
     repo="https://github.com/felixchenfy/ros_pub_and_sub_rgbd_and_cloud"
     echo "Installing rgbd images publisher: ${repo}"
     git clone ${repo}
+    cd ros_pub_and_sub_rgbd_and_cloud
+    chmod a+x pub_rgbd_and_cloud.py
 fi
+cd ${ROOT}
 
 publish_images(){
     ROOT=$(rospack find ros_detect_planes_from_depth_img)
